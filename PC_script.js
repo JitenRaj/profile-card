@@ -1,1 +1,26 @@
 
+const theme = document.querySelector(':root');
+        const btns = document.querySelectorAll(".btn");
+        
+        btns.forEach(function (btn){
+            btn.addEventListener("click", function (e){
+        
+                const color = e.currentTarget.classList;
+        
+                if (color.contains("btn1")){
+                    theme.style.setProperty('--theme-color', '#3498DB');
+                }
+                else if (color.contains("btn2")){
+                    theme.style.setProperty('--theme-color', '#FF1756');
+                }
+                else if (color.contains("btn3")){
+                    theme.style.setProperty('--theme-color', '#1CB65D');
+                }
+                else if (color.contains("btn4")){
+                    theme.style.setProperty('--theme-color', '#8e44ad');
+                }
+                else{
+                    theme.style.setProperty('--theme-color', '#F4B932');
+                }
+            });
+        });
